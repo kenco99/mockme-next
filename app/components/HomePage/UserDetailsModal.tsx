@@ -46,16 +46,16 @@ const UserDetailsModal: React.FC<UserDetailsModalProps> = ({
 
   return (
     <div className="absolute z-20 inset-0 bg-black bg-opacity-50 flex justify-center items-center">
-      <div className="bg-white p-8 rounded-lg w-full max-w-md">
+      <div className="bg-white p-8 flex flex-col gap-6 rounded-xl w-full max-w-md">
         <h2 className="text-2xl font-semibold mb-4">Complete Your Profile</h2>
-        <form onSubmit={handleSubmit} className="space-y-4">
+        <form onSubmit={handleSubmit} className="flex flex-col gap-6">
           <input
             type="text"
             placeholder="First Name"
             value={firstname}
             onChange={(e) => setFirstname(e.target.value)}
             required
-            className="w-full p-2 border border-gray-300 rounded-md"
+            className="w-full py-3 px-4 border border-gray-300 rounded-lg"
           />
           <input
             type="text"
@@ -63,7 +63,7 @@ const UserDetailsModal: React.FC<UserDetailsModalProps> = ({
             value={lastname}
             onChange={(e) => setLastname(e.target.value)}
             required
-            className="w-full p-2 border border-gray-300 rounded-md"
+            className="w-full py-3 px-4 border border-gray-300 rounded-lg"
           />
           <input
             type="tel"
@@ -71,11 +71,11 @@ const UserDetailsModal: React.FC<UserDetailsModalProps> = ({
             value={mobileNumber}
             onChange={(e) => setMobileNumber(e.target.value)}
             required
-            className="w-full p-2 border border-gray-300 rounded-md"
+            className="w-full py-3 px-4 border border-gray-300 rounded-lg"
           />
           <button
             type="submit"
-            className="w-full bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700 transition-colors"
+            className="w-full mt-4 bg-black text-white py-3 rounded-md hover:bg-gray-900 transition-colors"
           >
             Submit
           </button>

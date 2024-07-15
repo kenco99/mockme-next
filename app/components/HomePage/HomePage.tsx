@@ -119,13 +119,17 @@ const HomePage: React.FC = () => {
         </div>
       </div>
       <main className="max-w-5xl mx-auto relative z-10">
-        <div className="text-center my-24">
-          <h2 className="font-playfair text-[52px]/loose text-gray-400 italic mb-2">
+        <div className="text-center my-20">
+          <h2 className="font-playfair text-[52px] text-gray-500 italic mb-2">
             1000+ practice questions
           </h2>
           <h3 className="font-satoshi text-[52px] text-gray-800 font-semibold">
             For GMAT Focus Edition
           </h3>
+          <p className="text-gray-400 leading-relaxed mt-6 max-w-2xl mx-auto">
+            Questions from past GMAT exams, verified by GMAT experts, to help
+            you ace the exam. Say bye to expensive GMAT books and prep material
+          </p>
         </div>
         <div className="bg-white flex flex-col gap-10 rounded-3xl shadow-bigcard py-12 px-8">
           <div className="flex items-center">
@@ -133,13 +137,13 @@ const HomePage: React.FC = () => {
               <PiMathOperations />
             </div>
             <div className="flex-grow">
-              <h4 className="font-inter text-lg font-semibold mb-1">
+              <h4 className="font-inter text-lg font-medium mb-1">
                 Math practice
               </h4>
-              <p className="text-gray-600 text-sm">No of questions: 100</p>
+              {/* <p className="text-gray-600 text-sm">No of questions: 100</p> */}
             </div>
             <button
-              className="bg-gray-800 text-white w-44 px-4 py-3 rounded-md hover:bg-gray-700 transition-colors"
+              className="bg-gray-900 text-white font-medium w-44 px-4 py-3 rounded-md hover:bg-gray-800 transition-colors"
               onClick={handleStartMath}
             >
               Start <span className="ml-1">→</span>
@@ -151,19 +155,15 @@ const HomePage: React.FC = () => {
               <PiArticleNyTimes />
             </div>
             <div className="flex-grow">
-              <h4 className="font-inter text-lg font-semibold mb-1">
+              <h4 className="font-inter text-lg font-medium mb-1">
                 Verbal Practice
               </h4>
             </div>
             <button
-              className="bg-gray-100 text-gray-500 w-44 flex justify-center items-center gap-2 px-4 py-3 rounded-md"
+              className="bg-gray-900 text-white font-medium w-44 px-4 py-3 rounded-md hover:bg-gray-800 transition-colors"
               onClick={handleStartMath}
-              disabled
             >
-              Coming soon{" "}
-              <span className="ml-1">
-                <PiLockFill />
-              </span>
+              Start <span className="ml-1">→</span>
             </button>
           </div>
           <hr className="w-full border-gray-100"></hr>
@@ -172,19 +172,15 @@ const HomePage: React.FC = () => {
               <PiChartLineUp />
             </div>
             <div className="flex-grow">
-              <h4 className="font-inter text-lg font-semibold mb-1">
+              <h4 className="font-inter text-lg font-medium mb-1">
                 Data insights
               </h4>
             </div>
             <button
-              className="bg-gray-100 text-gray-500 w-44 flex justify-center items-center gap-2 px-4 py-3 rounded-md"
+              className="bg-gray-900 text-white font-medium w-44 px-4 py-3 rounded-md hover:bg-gray-800 transition-colors"
               onClick={handleStartMath}
-              disabled
             >
-              Coming soon{" "}
-              <span className="ml-1">
-                <PiLockFill />
-              </span>
+              Start <span className="ml-1">→</span>
             </button>
           </div>
         </div>
