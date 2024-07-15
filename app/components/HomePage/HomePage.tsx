@@ -121,7 +121,7 @@ const HomePage: React.FC = () => {
       <main className="max-w-5xl mx-auto relative z-10">
         <div className="text-center my-24">
           <h2 className="font-playfair text-[52px]/loose text-gray-400 italic mb-2">
-            Unlimited practice questions
+            1000+ practice questions
           </h2>
           <h3 className="font-satoshi text-[52px] text-gray-800 font-semibold">
             For GMAT Focus Edition
