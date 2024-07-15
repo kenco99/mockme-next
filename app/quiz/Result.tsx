@@ -20,7 +20,7 @@ const Result: React.FC<ResultProps> = ({
 
   return (
     <div className="flex flex-row gap-4 mt-8 p-6 bg-gray-100 rounded-lg">
-      <div className="text-lg pt-2">
+      <div className="text-lg pt-1.5">
         <PiCampfire />
       </div>
       <div>
@@ -32,7 +32,7 @@ const Result: React.FC<ResultProps> = ({
         </div>
         <button
           onClick={onNextQuestion}
-          className="bg-black text-white px-4 py-2 rounded-lg hover:bg-gray-800 transition-colors"
+          className="bg-black text-white px-8 ml-auto py-3 rounded-lg hover:bg-gray-800 transition-colors"
         >
           Next Question →
         </button>

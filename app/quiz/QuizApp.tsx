@@ -208,7 +208,7 @@ const QuizApp: React.FC = () => {
                 className="w-full bg-black text-white py-3 mt-8 rounded-lg font-medium hover:bg-gray-800 transition-colors"
                 onClick={handleConfirm}
               >
-                Next
+                Submit
               </button>
             )}
           </div>

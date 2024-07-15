@@ -127,7 +127,7 @@ const CreateSession: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen py-6">
+    <div className="min-h-screen bg-home-gradient py-6">
       <div className="flex flex-col gap-8 max-w-3xl mx-auto px-10 py-12 bg-white shadow-bigcard rounded-3xl">
         <h1 className="text-3xl font-bold mb-2">Configure Your Practice</h1>
         <div ref={sectionRef}>

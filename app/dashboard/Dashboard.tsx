@@ -76,7 +76,7 @@ const Dashboard: React.FC = () => {
     return <div className="text-center mt-8 text-red-600">{error}</div>;
 
   return (
-    <div className="flex justify-center p-8">
+    <div className="flex justify-center min-h-screen bg-home-gradient p-8">
       <div className="bg-white rounded-3xl flex flex-col gap-10 shadow-bigcard px-10 py-12 w-full max-w-3xl">
         <h1 className="text-3xl font-bold mb-2">Sessions</h1>
 
