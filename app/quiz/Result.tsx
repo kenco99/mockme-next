@@ -18,6 +18,16 @@ const Result: React.FC<ResultProps> = ({
 }) => {
   if (!result) return null;
 
+  const renderMathJaxWithLineBreaks = (text) => {
+    const segments = text.split(/<br>/i);
+    return segments.map((segment, index) => (
+        <React.Fragment key={index}>
+          <MathJaxContext><MathJax>{segment}</MathJax></MathJaxContext>
+          {index < segments.length - 1 && <br />}
+        </React.Fragment>
+    ));
+  };
+
   return (
     <div className="flex flex-row gap-4 mt-8 p-6 bg-gray-100 rounded-lg">
       <div className="text-lg pt-1.5">
@@ -26,9 +36,7 @@ const Result: React.FC<ResultProps> = ({
       <div>
         <h3 className="text-lg font-bold text-gray-900 mb-4">Solution</h3>
         <div className="solution-text text-base leading-relaxed mb-4">
-          <MathJaxContext>
-            <MathJax>{result.solution_text}</MathJax>
-          </MathJaxContext>
+          {renderMathJaxWithLineBreaks(result.solution_text)}
         </div>
         <button
           onClick={onNextQuestion}
