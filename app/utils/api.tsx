@@ -1,4 +1,4 @@
-import axios, { AxiosInstance, AxiosRequestConfig, AxiosResponse, AxiosError } from 'axios';
+import axios, { AxiosInstance, InternalAxiosRequestConfig, AxiosRequestConfig, AxiosResponse, AxiosError } from 'axios';
 
 const URL = process.env.NEXT_PUBLIC_API_URL;
 
@@ -8,7 +8,7 @@ const axiosInstance: AxiosInstance = axios.create({
 
 // Add a request interceptor
 axiosInstance.interceptors.request.use(
-    (config: AxiosRequestConfig): AxiosRequestConfig => {
+    (config: InternalAxiosRequestConfig): InternalAxiosRequestConfig => {
         if (typeof window !== 'undefined') {
             const token = localStorage.getItem('jwt_token');
             if (token && config.headers) {
@@ -129,7 +129,12 @@ interface SessionData {
     [key: string]: string | number | boolean | string[];
 }
 
-export const createSession = async (sessionData: SessionData): Promise<any> => {
+export const createSession = async (sessionData: {
+    duration_seconds: number | null;
+    topic_ids: number[];
+    section_ids: number[];
+    number_of_questions: number | null
+}): Promise<any> => {
     try {
         const response = await axiosInstance.post('/mockme/session', sessionData);
         return response.data.data;

@@ -61,8 +61,8 @@ const QuizApp: React.FC = () => {
   );
 
   useEffect(() => {
-    const sessionId = searchParams.get("session_id");
-    const questionId = searchParams.get("question_id");
+    const sessionId = !!searchParams ? searchParams.get("session_id") : null;
+    const questionId = !!searchParams ? searchParams.get("question_id") : null;
 
     if (sessionId) {
       fetchQuestion({ sessionId });
@@ -79,7 +79,7 @@ const QuizApp: React.FC = () => {
       intervalId = setInterval(() => {
         setQuestionTime((prevTime) => prevTime + 1);
         if (totalTime !== null) {
-          setTotalTime((prevTime) => prevTime - 1);
+          setTotalTime((prevTime) => (!!prevTime ? prevTime : 1) - 1);
         }
       }, 1000);
     }

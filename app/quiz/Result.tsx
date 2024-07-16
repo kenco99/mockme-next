@@ -18,7 +18,7 @@ const Result: React.FC<ResultProps> = ({
 }) => {
   if (!result) return null;
 
-  const renderMathJaxWithLineBreaks = (text) => {
+  const renderMathJaxWithLineBreaks = (text:string) => {
     const segments = text.split(/<br>/i);
     return segments.map((segment, index) => (
         <React.Fragment key={index}>
